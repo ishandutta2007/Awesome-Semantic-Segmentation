@@ -92,3 +92,15 @@ Deploying dense pixel-level models within real-world engineering constraints req
 | [**High-Resolution Clinical Diagnostic Tissue Mapping**](details/clinical_tissue_mapping.md) | Analyzes multi-megapixel medical scans (such as MRIs, CT volumes, and digital pathology slides). Symmetrical encoder-decoder networks (U-Net variants) automate pixel-level tracking for tumor borders, organ anomalies, and structural fractures, providing radiologists with precise volumetric measurements for surgery planning [INDEX: 1]. | 2015 | [U-Net](https://arxiv.org/abs/1505.04597) |
 | [**Satellite Remote Sensing & Agricultural Zoning**](details/satellite_remote_sensing.md) | Processes planetary imagery and hyperspectral mapping data. Open-vocabulary and dense segmentation models parse earth observation feeds automatically, delineating crop health clusters, tracking deforestation boundaries, and monitoring urban expansion zones across changing seasonal cycles. | 2010 | [Detecting Roads in Aerial Images](https://doi.org/10.1007/978-3-642-15567-3_16) |
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Semantic-Segmentation&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Semantic-Segmentation&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Semantic-Segmentation&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Semantic-Segmentation&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
+
