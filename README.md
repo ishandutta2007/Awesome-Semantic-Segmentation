@@ -4,6 +4,24 @@
   <img src="assets/banner.svg" alt="Awesome Semantic Segmentation Banner" width="100%">
 </p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
+
+> **Awesome Semantic Segmentation** is a curated list of semantic segmentation techniques, architectures, and resources. Optimize your computer vision research with deep learning, encoder-decoder networks, and foundation models.
+
+---
+
+## 📌 Table of Contents
+1. [🧠 Semantic Segmentation in AI: Evolution, Variants, Types, & Applications](#-semantic-segmentation-in-ai-evolution-variants-types--applications)
+2. [📅 1. The Chronological Evolution](#-1-the-chronological-evolution)
+3. [⚙️ 2. Core Functional & Architectural Variants](#️-2-core-functional--architectural-variants)
+4. [🏗️ 3. High-Capacity Architectural Component Types](#️-3-high-capacity-architectural-component-types)
+5. [🛠️ 4. Production Engineering Challenges & Hardware Solutions](#️-4-production-engineering-challenges--hardware-solutions)
+6. [🚀 5. Frontier Real-World AI Applications](#-5-frontier-real-world-ai-applications)
+
+---
+
 ## 🧠 Semantic Segmentation in AI: Evolution, Variants, Types, & Applications
 
 Semantic Segmentation is a dense computer vision paradigm where a model assigns a specific categorical label to every single pixel coordinate in an image. Unlike image classification (which predicts a global label for an entire canvas) or object detection (which draws coarse 2D bounding boxes), semantic segmentation provides fine-grained, pixel-level scene understanding. It groups pixels belonging to the same semantic class (e.g., `road`, `pedestrian`, `sky`) into absolute structural shapes. Over the history of AI, this field has transitioned from manual boundary-clustering heuristics to deep deep-learning architectures, multi-scale skip networks, and open-vocabulary foundational foundation models.
