@@ -10,7 +10,7 @@ Semantic Segmentation is a dense computer vision paradigm where a model assigns 
 The technical progression of pixel-level classification has transitioned from hand-crafted edge clustering to encoder-decoder skip networks and unified, open-vocabulary attention topologies.
 
 
-```
+```mermaid
 [Classical Geometric Clustering] ----> [Fully Convolutional Networks (FCN, 2015)] ----> [Open-Vocabulary Foundation Systems (SAM, 2023+)](Rigid Watershed / Graph Cuts)          (The Spatial Encoder-Decoder Revolution)           (Zero-Shot Text/Point Prompted Visual Masks)
 ```
 
