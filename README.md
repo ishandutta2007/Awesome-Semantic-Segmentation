@@ -11,7 +11,10 @@ The technical progression of pixel-level classification has transitioned from ha
 
 
 ```mermaid
-[Classical Geometric Clustering] ----> [Fully Convolutional Networks (FCN, 2015)] ----> [Open-Vocabulary Foundation Systems (SAM, 2023+)](Rigid Watershed / Graph Cuts)          (The Spatial Encoder-Decoder Revolution)           (Zero-Shot Text/Point Prompted Visual Masks)
+flowchart LR
+    A["Classical Geometric Clustering<br/>(Rigid Watershed / Graph Cuts)"]
+    --> B["Fully Convolutional Networks (FCN, 2015)<br/>(The Spatial Encoder-Decoder Revolution)"]
+    --> C["Open-Vocabulary Foundation Systems (SAM, 2023+)<br/>(Zero-Shot Text/Point Prompted Visual Masks)"]
 ```
 
 *   **The Heuristic Boundary & Graph Cut Era (Classical Vision, Pre-2015)**
