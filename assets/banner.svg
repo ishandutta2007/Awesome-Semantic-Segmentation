@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f24" />
+      <stop offset="50%" stop-color="#141b3d" />
+      <stop offset="100%" stop-color="#070a1e" />
+    </linearGradient>
+
+    <!-- Scanline Glow Gradient -->
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0" />
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    
+    <linearGradient id="seg1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="seg2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#b45309" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Dynamic styles for animations -->
+    <style>
+      @keyframes scan {
+        0% { transform: translateY(-150px); }
+        50% { transform: translateY(350px); }
+        100% { transform: translateY(-150px); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.75; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(1deg); }
+      }
+      @keyframes dash {
+        to { stroke-dashoffset: -40; }
+      }
+      .scanner {
+        animation: scan 6s ease-in-out infinite;
+      }
+      .node-pulse {
+        animation: pulse 3s ease-in-out infinite;
+      }
+      .floating-group {
+        animation: float 8s ease-in-out infinite;
+      }
+      .dashed-path {
+        stroke-dasharray: 8, 4;
+        animation: dash 2s linear infinite;
+      }
+      .neural-link {
+        stroke: #3b82f6;
+        stroke-width: 1.5;
+        opacity: 0.4;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" rx="15" />
+
+  <!-- Grid overlay -->
+  <g opacity="0.08">
+    <path d="M 0,50 L 1200,50 M 0,100 L 1200,100 M 0,150 L 1200,150 M 0,200 L 1200,200 M 0,250 L 1200,250 M 0,300 L 1200,300 M 0,350 L 1200,350" stroke="#ffffff" stroke-width="1" />
+    <path d="M 100,0 L 100,400 M 200,0 L 200,400 M 300,0 L 300,400 M 400,0 L 400,400 M 500,0 L 500,400 M 600,0 L 600,400 M 700,0 L 700,400 M 800,0 L 800,400 M 900,0 L 900,400 M 1000,0 L 1000,400 M 1100,0 L 1100,400" stroke="#ffffff" stroke-width="1" />
+  </g>
+
+  <!-- Left/Center Abstract Segmentation Visualization -->
+  <g transform="translate(100, 50)" class="floating-group">
+    <!-- Base "Image" bounds -->
+    <rect x="0" y="0" width="400" height="300" rx="10" fill="none" stroke="#475569" stroke-width="3" opacity="0.5" />
+    
+    <!-- Segmented Regions -->
+    <!-- Region 1 (Forest/Background) -->
+    <path d="M 10,290 L 10,180 Q 80,150 150,190 T 300,140 Q 350,150 390,120 L 390,290 Z" fill="url(#seg1Grad)" />
+    <!-- Region 2 (Object/Car/Anomaly) -->
+    <path d="M 120,240 Q 180,180 250,210 T 320,260 Q 220,290 120,240 Z" fill="url(#seg2Grad)" />
+    
+    <!-- Boundary lines -->
+    <path d="M 10,180 Q 80,150 150,190 T 300,140 Q 350,150 390,120" fill="none" stroke="#10b981" stroke-width="2.5" class="dashed-path" />
+    <path d="M 120,240 Q 180,180 250,210 T 320,260 Q 220,290 120,240" fill="none" stroke="#f59e0b" stroke-width="2.5" class="dashed-path" />
+    
+    <!-- Receptive Field / Scanning lines to Neural Net -->
+    <path d="M 250,210 L 550,100" class="neural-link" />
+    <path d="M 320,260 L 550,220" class="neural-link" />
+  </g>
+
+  <!-- Neural Net nodes on Right side -->
+  <g transform="translate(680, 50)" opacity="0.85">
+    <!-- Connections -->
+    <line x1="50" y1="80" x2="150" y2="50" stroke="#6366f1" stroke-width="2" />
+    <line x1="50" y1="80" x2="150" y2="150" stroke="#6366f1" stroke-width="2" />
+    <line x1="50" y1="220" x2="150" y2="150" stroke="#6366f1" stroke-width="2" />
+    <line x1="50" y1="220" x2="150" y2="250" stroke="#6366f1" stroke-width="2" />
+    <line x1="150" y1="50" x2="280" y2="80" stroke="#a855f7" stroke-width="2" />
+    <line x1="150" y1="150" x2="280" y2="80" stroke="#a855f7" stroke-width="2" />
+    <line x1="150" y1="150" x2="280" y2="220" stroke="#a855f7" stroke-width="2" />
+    <line x1="150" y1="250" x2="280" y2="220" stroke="#a855f7" stroke-width="2" />
+    <line x1="280" y1="80" x2="380" y2="150" stroke="#ec4899" stroke-width="2" />
+    <line x1="280" y1="220" x2="380" y2="150" stroke="#ec4899" stroke-width="2" />
+
+    <!-- Nodes -->
+    <circle cx="50" cy="80" r="8" fill="#3b82f6" class="node-pulse" />
+    <circle cx="50" cy="220" r="8" fill="#3b82f6" />
+    <circle cx="150" cy="50" r="10" fill="#6366f1" />
+    <circle cx="150" cy="150" r="10" fill="#6366f1" class="node-pulse" />
+    <circle cx="150" cy="250" r="10" fill="#6366f1" />
+    <circle cx="280" cy="80" r="12" fill="#a855f7" />
+    <circle cx="280" cy="220" r="12" fill="#a855f7" class="node-pulse" />
+    <circle cx="380" cy="150" r="15" fill="#ec4899" />
+  </g>
+
+  <!-- Animated Scanner Bar -->
+  <g class="scanner">
+    <rect x="80" y="30" width="440" height="20" fill="url(#scanGrad)" />
+    <line x1="80" y1="40" x2="520" y2="40" stroke="#60a5fa" stroke-width="2.5" opacity="0.9" />
+  </g>
+
+  <!-- Title Text -->
+  <text x="600" y="80" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="34" font-weight="900" fill="url(#primaryGrad)" letter-spacing="2">SEMANTIC SEGMENTATION</text>
+  <text x="600" y="115" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#94a3b8" letter-spacing="1">CHRONOLOGICAL EVOLUTION &amp; ARCHITECTURES</text>
+
+  <!-- Highlights/Labels at bottom -->
+  <g transform="translate(600, 160)" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#64748b">
+    <rect x="0" y="0" width="130" height="30" rx="5" fill="#1e293b" />
+    <text x="15" y="19" fill="#10b981">● Encoder-Decoder</text>
+    
+    <rect x="145" y="0" width="110" height="30" rx="5" fill="#1e293b" />
+    <text x="15" y="19" fill="#3b82f6">● Dilated Conv</text>
+
+    <rect x="265" y="0" width="130" height="30" rx="5" fill="#1e293b" />
+    <text x="15" y="19" fill="#a855f7">● Open Vocabulary</text>
+  </g>
+</svg>

@@ -1,11 +1,16 @@
-# Awesome-Semantic-Segmentation
-## Semantic Segmentation in AI: Evolution, Variants, Types, & Applications
+# 🎨 Awesome-Semantic-Segmentation
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Semantic Segmentation Banner" width="100%">
+</p>
+
+## 🧠 Semantic Segmentation in AI: Evolution, Variants, Types, & Applications
 
 Semantic Segmentation is a dense computer vision paradigm where a model assigns a specific categorical label to every single pixel coordinate in an image. Unlike image classification (which predicts a global label for an entire canvas) or object detection (which draws coarse 2D bounding boxes), semantic segmentation provides fine-grained, pixel-level scene understanding. It groups pixels belonging to the same semantic class (e.g., `road`, `pedestrian`, `sky`) into absolute structural shapes. Over the history of AI, this field has transitioned from manual boundary-clustering heuristics to deep deep-learning architectures, multi-scale skip networks, and open-vocabulary foundational foundation models.
 
 ---
 
-## 1. The Chronological Evolution
+## 📅 1. The Chronological Evolution
 
 The technical progression of pixel-level classification has transitioned from hand-crafted edge clustering to encoder-decoder skip networks and unified, open-vocabulary attention topologies.
 
@@ -25,7 +30,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Architectural Variants
+## ⚙️ 2. Core Functional & Architectural Variants
 
 Semantic Segmentation setups are categorized based on how they track bounding contours, manage multi-scale features, and differentiate intersecting objects.
 
@@ -38,7 +43,7 @@ Semantic Segmentation setups are categorized based on how they track bounding co
 
 ---
 
-## 3. High-Capacity Architectural Component Types
+## 🏗️ 3. High-Capacity Architectural Component Types
 
 To retain crisp spatial definitions through deep neural layers, segmentation networks deploy specialized convolutional and routing layers.
 
@@ -50,7 +55,7 @@ To retain crisp spatial definitions through deep neural layers, segmentation net
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🛠️ 4. Production Engineering Challenges & Hardware Solutions
 
 Deploying dense pixel-level models within real-world engineering constraints requires balancing activation bloat with processing speeds.
 
@@ -61,7 +66,7 @@ Deploying dense pixel-level models within real-world engineering constraints req
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🚀 5. Frontier Real-World AI Applications
 
 | Application | Details | Year First Used | Paper Link |
 | :--- | :--- | :--- | :--- |
